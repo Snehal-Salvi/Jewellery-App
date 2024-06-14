@@ -1,0 +1,259 @@
+/* General Styles */
+
+.header {
+  background-color: #081c3f;
+  width: 100%;
+  height: 20vh;
+}
+
+.navbarSection {
+  display: flex;
+ 
+  align-items: center;
+  justify-content: space-between;
+  height: 10vh;
+ 
+  padding: 0 1rem;
+}
+
+.appName {
+  display: flex;
+  align-items: center;
+  font-size: 35px;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo {
+  width: 30px;
+  height: 30px;
+  margin-left: 2px;
+}
+
+.sarafa {
+  color: white;
+  font-weight: 900;
+}
+
+.bazar {
+  color: goldenrod;
+  font-weight: 900;
+}
+
+.searchBar {
+ 
+  margin-top: 35px;
+  background-color: #ececec;
+  width: 38%;
+  border: 1px solid #ffffff;
+}
+
+.input {
+  background-color: #ececec;
+}
+
+.input::placeholder {
+  color: gray;
+}
+
+.searchIcon {
+  color: black;
+}
+
+.loginLinks {
+  display: flex;
+  align-items: center;
+  color: goldenrod;
+}
+
+.loginLinks a {
+  text-decoration: none;
+  color: goldenrod;
+  font-weight: bold;
+  margin: 0 5px;
+}
+
+.loginLinks a:hover {
+  text-decoration: underline;
+}
+
+.loginLinks span {
+  margin: 0 5px;
+}
+
+.dropdown {
+  position: relative; /* Ensure dropdown is positioned relative */
+  z-index: 1; /* Ensure dropdown is above background */
+}
+
+.dropdown ul {
+  display: flex;
+  position: absolute;
+  background-color: #081c3f;
+  width: auto;
+  list-style-type: none;
+ 
+  top: 100%; /* Position dropdown below parent */
+  left: 0; /* Align with parent */
+}
+
+.dropdown ul li {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #ffffff;
+  padding: 12px;
+  position: relative;
+}
+
+.dropdown ul li ul {
+  display: none;
+  position: absolute;
+  background-color: white;
+  list-style-type: none;
+  padding: 0;
+  left: 100%;
+  top: 0;
+}
+
+.dropdown ul li:hover {
+  cursor: pointer;
+
+}
+.dropdown ul li:hover ul {
+  display: block;
+  margin-top: 40px;
+ width: 50%;
+  left: 0;
+  position: absolute;
+
+}
+.dropdown ul li:hover ul li {
+  display: block;
+  width: 100px;
+  background-color: white;
+  color: black;
+}
+
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .header{
+    height: 10vh;
+  }
+  .navbarSection {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  
+   
+  }
+
+  
+
+  .appName {
+    margin-bottom: 0;
+    font-size: 20px;
+  }
+
+  
+.logo {
+  width: 15px;
+  height: 15px;
+  
+}
+
+
+
+  .searchBar {
+    display: none;
+  }
+
+  .dropdown ul {
+    display: none; /* Initially hidden */
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0; /* Remove padding to ensure full-width */
+    z-index: 1; /* Ensure dropdown is above background */
+    position: absolute; /* Position dropdown absolutely */
+  }
+
+  .dropdown ul li {
+    width: 100%;
+    text-align: left;
+    padding: 10px 0;
+    position: relative;
+  }
+
+  .dropdown ul li ul {
+    position: static;
+    width: auto;
+    margin: 0;
+  }
+
+  .dropdownItem {
+    display: none; /* Initially hide dropdown items */
+  }
+
+  .dropdown.show ul {
+    display: flex; /* Ensure the ul is shown */
+    flex-direction: column; /* Align items vertically */
+    width: 100%; /* Full width on small screens */
+    padding: 0; /* Reset padding for full width */
+    background-color: #081c3f; /* Match the header background */
+    z-index: 1; /* Adjust z-index to be above other content */
+    position: absolute; /* Position dropdown absolutely */
+    top: 100%; /* Position dropdown below parent */
+    left: 0; /* Align with parent */
+  }
+
+  .dropdown.show ul li {
+    width: 100%;
+    padding: 10px 1rem; /* Add padding to dropdown items */
+    z-index: 1; /* Adjust z-index to be above other content */
+  }
+
+  .dropdown.show ul li ul {
+    display: none; /* Hide submenus by default */
+    position: static;
+    width: auto;
+    margin: 0;
+    z-index: 1; /* Adjust z-index to be above other content */
+  }
+
+  .dropdown.show ul li:hover > ul {
+    display: flex; /* Show submenu on click */
+  }
+
+  .hamburger {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: white;
+    font-size: 1.5rem;
+    z-index: 2; /* Ensure hamburger is above other content */
+  }
+
+  .hamburgerIcon {
+    display: none; /* Hide the hamburger by default */
+  }
+
+  /* Show hamburger on small screens */
+  @media (max-width: 768px) {
+    .hamburgerIcon {
+      display: block;
+    }
+  }
+
+  /* Show class to display elements when toggled */
+  .show {
+    display: flex !important; /* Forces display when toggled */
+    flex-direction: column;
+    width: 100%;
+    z-index: 1; /* Adjust z-index to be below dropdown */
+  }
+}
