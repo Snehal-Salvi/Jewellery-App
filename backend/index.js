@@ -7,6 +7,7 @@ import userRoutes from "./routes/user.routes.js";
 import authRoutes from "./routes/auth.routes.js";
 import companyRoutes from "./routes/company.routes.js";
 import uploadRoutes from "./routes/upload.routes.js";
+import contactRoutes from './routes/contact.routes.js';
 import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
 import { verifyToken } from "./middleware/auth.js"; 
@@ -27,6 +28,7 @@ app.use("/api/user", userRoutes);
 app.use("/api/auth", authRoutes);
 app.use("/api/companies", verifyToken, companyRoutes); // Protected routes
 app.use("/api/upload", verifyToken, uploadRoutes); // Protected routes
+app.use('/api/contact', contactRoutes);
 
 app.listen(3001, () => {
   console.log("Server is listening on port 3001");
