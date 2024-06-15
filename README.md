@@ -16,6 +16,10 @@ For more information on frontend setup and usage, please refer to the [Frontend 
 
 ## Application Demo
 
+
+https://github.com/Snehal-Salvi/Jewellery-App/assets/125987932/c221592c-f3eb-442a-8a29-c949f3913ba5
+
+
 ## Backend Approach
 
 Approach taken to develop the backend of the project. Include the following points:
