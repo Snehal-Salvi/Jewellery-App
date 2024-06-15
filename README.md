@@ -2,6 +2,10 @@
 
 This is a Jewelry Store management system consisting of both frontend and backend applications.
 
+## Deployment Link:
+
+[Jewelry Store]()
+
 ## Backend Documentation
 
 For more information on backend setup and usage, please refer to the [Backend README](/backend/README.md).
