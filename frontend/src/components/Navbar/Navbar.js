@@ -12,37 +12,42 @@ import {
 import { BACKEND_URL } from "../../utils/constants";
 
 export default function Navbar() {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [searchOpen, setSearchOpen] = useState(false);
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const navigate = useNavigate();
+  const [menuOpen, setMenuOpen] = useState(false); // State to manage menu visibility
+  const [searchOpen, setSearchOpen] = useState(false); // State to manage search bar visibility
+  const [isAuthenticated, setIsAuthenticated] = useState(false); // State to track authentication status
+  const navigate = useNavigate(); // Hook from react-router-dom for navigation
 
   useEffect(() => {
+    // Function to check authentication status on component mount and storage change
     const checkAuthStatus = () => {
       const token = localStorage.getItem("access_token");
-
-      setIsAuthenticated(!!token);
+      setIsAuthenticated(!!token); // Update isAuthenticated state based on token presence
     };
 
-    checkAuthStatus();
+    checkAuthStatus(); // Initial call to check authentication status
 
+    // Event listener to update authentication status on storage change
     window.addEventListener("storage", checkAuthStatus);
 
+    // Cleanup function to remove event listener on component unmount
     return () => {
       window.removeEventListener("storage", checkAuthStatus);
     };
   }, []);
 
+  // Function to toggle menu visibility and close search bar
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
-    setSearchOpen(false);
+    setSearchOpen(false); // Close search bar when menu is toggled
   };
 
+  // Function to toggle search bar visibility and close menu
   const toggleSearch = () => {
     setSearchOpen(!searchOpen);
-    setMenuOpen(false);
+    setMenuOpen(false); // Close menu when search bar is toggled
   };
 
+  // Function to handle user logout
   const handleLogout = async () => {
     try {
       const res = await fetch(`${BACKEND_URL}/api/auth/logout`, {
@@ -51,16 +56,17 @@ export default function Navbar() {
       });
 
       if (res.ok) {
-        setIsAuthenticated(false);
-        localStorage.removeItem("access_token");
+        setIsAuthenticated(false); // Update authentication state to false
+        localStorage.removeItem("access_token"); // Remove access token from localStorage
 
-        navigate("/signin");
+        navigate("/"); // Redirect to home page after logout
       }
     } catch (error) {
       console.error("Error during logout:", error);
     }
   };
 
+  // JSX rendering
   return (
     <div>
       <nav className={styles.header}>

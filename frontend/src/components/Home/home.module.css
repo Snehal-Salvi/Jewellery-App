@@ -1,25 +1,24 @@
 .carouselContainer {
-  height: 80vh; /* Initial height for larger screens */
+  height: 80vh;  
   width: 100%;
-  position: relative; /* Ensure buttons are positioned correctly */
+  position: relative; 
 }
 
 .carouselContainer img {
-  height: 80vh; /* Ensure images fill the height of the container */
-  width: 100%; /* Ensure images take full width */
-  object-fit: cover; /* Cover the container with the image */
+  height: 80vh; 
+  width: 100%;  
+  object-fit: cover;  
 }
 
 @media (max-width: 768px) {
   .carouselContainer {
-    height: 50vh; /* Reduce height for smaller screens */
+    height: 10vh; 
   }
   
   .carouselContainer img {
-    height: 50vh; /* Adjust the height dynamically */
+    height: 20vh; 
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
   }
 
- 
 }
