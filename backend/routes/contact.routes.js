@@ -1,8 +1,9 @@
-import express from 'express';
-import { sendQueryEmail } from '../controllers/email.controller.js';
+import express from "express";
+import { sendQueryEmail } from "../controllers/email.controller.js";
 
 const router = express.Router();
 
-router.post('/', sendQueryEmail);  
+// Route for handling POST requests to send query emails
+router.post("/", sendQueryEmail);
 
 export default router;

@@ -1,0 +1,85 @@
+/* Assuming this is part of your existing CSS */
+
+.detailsContainer {
+    width: 100%;
+    height: 80vh;
+ 
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .companyLogo {
+    width: 30%;
+    height: 70vh;
+ 
+  }
+  
+  .companyLogo img {
+    width: 100%;
+    height: 200px; /* Adjust height as needed for smaller screens */
+  }
+  
+  .companyDetails {
+    width: 50%;
+    height: 70vh;
+    padding: 20px;
+ 
+    color:   #555;
+  }
+
+  
+.phoneIcon{
+  font-size: 40px;
+  color: #252a52;
+  margin-right: 10px;
+}
+
+.wpIcon{
+  color: #3ee44c; 
+  font-size: 50px;
+}
+  
+  .ownerDetails {
+    width: 50%;
+    height: 70vh;
+    padding: 20px;
+ 
+   text-align: center;
+  }
+
+  .ownerDetails img{
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+  }
+
+  .ownerDetails button{
+    background-color: #00b9cd;
+    width: 50%;
+    border-radius: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .detailsContainer {
+      flex-direction: column; /* Stack items vertically on smaller screens */
+      height: fit-content;
+      width: 100%;
+    }
+
+    .companyLogo,
+    .companyDetails,
+    .ownerDetails {
+      width: 100%; /* Full width on smaller screens */
+      height: fit-content; /* Adjust height based on content */
+      margin-bottom: 20px; /* Add space between sections */
+    }
+
+   
+  
+   
+   
+  }
+  

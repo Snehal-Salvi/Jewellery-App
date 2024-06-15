@@ -30,7 +30,7 @@
 .logo {
   width: 30px;
   height: 30px;
-  margin-left: 2px;
+ 
 }
 
 .sarafa {
@@ -41,6 +41,7 @@
 .bazar {
   color: goldenrod;
   font-weight: 900;
+ 
 }
 
 .searchBar {
@@ -86,7 +87,7 @@
 
 .dropdown {
   position: relative; /* Ensure dropdown is positioned relative */
-  z-index: 1; /* Ensure dropdown is above background */
+  /* Ensure dropdown is above background */
 }
 
 .dropdown ul {
@@ -120,6 +121,7 @@
 
 .dropdown ul li:hover {
   cursor: pointer;
+  z-index: 1;
 
 }
 .dropdown ul li:hover ul {

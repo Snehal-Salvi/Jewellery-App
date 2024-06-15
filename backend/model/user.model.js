@@ -1,3 +1,4 @@
+// Define Mongoose schema and model for User with username, email, and password fields
 import mongoose from "mongoose";
 
 const userSchema = new mongoose.Schema({
@@ -15,8 +16,7 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true,         
     },
-}, {timestamps: true},
-)
+}, { timestamps: true });
 
 const User = mongoose.model('User', userSchema);
 

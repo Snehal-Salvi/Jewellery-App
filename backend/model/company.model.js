@@ -1,4 +1,4 @@
-// models/company.model.js
+// Define Mongoose schema and model for Company with fields such as name, description, address, contact details, and owner information
 import mongoose from "mongoose";
 
 const companySchema = new mongoose.Schema(
@@ -28,7 +28,6 @@ const companySchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-
     establishedDate: {
       type: Date,
       required: true,
@@ -57,7 +56,7 @@ const companySchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-// Add full-text search index on relevant fields
+// Add full-text search index on relevant fields for efficient searching
 companySchema.index({
   name: "text",
   description: "text",
