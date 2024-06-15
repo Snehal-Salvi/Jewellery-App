@@ -2,6 +2,56 @@
 
 This project implements a Jewelry Store Management System backend using Node.js, Express, MongoDB, and other libraries.
 
+## Snapshots
+
+- **Signup Route**
+
+![Signup Route](../backend/assets/SignupRoute.png)
+
+- **SignIn Route**
+
+![SignIn Route](../backend/assets/SignIn.png)
+
+- **Get All Companies**
+
+![Get All Companies](../backend/assets/GetCompanies.png)
+
+- **Add Company**
+
+![Add Company](../backend/assets/AddCompany.png)
+
+- **Upload By Excel**
+
+![Upload By Excel](../backend/assets/uploadbyExcelFile.png)
+
+- **Get Company by ID**
+
+![Get Company by ID](../backend/assets/getCompanyByID.png)
+
+- **Update Company by Id**
+
+![Update Company by Id](../backend/assets/UpdateCompany.png)
+
+- **Delete Company by Id**
+
+![Delete Company by Id](../backend/assets/DeleteCompany.png)
+
+- **Search Company**
+
+![Search Company](../backend/assets/SearchCompany.png)
+
+- **Contact Route**
+
+![Contact Route](../backend/assets/ContactRoute.png)
+
+- **Query Email**
+
+![Query Email](../backend/assets/QueryEmail.png)
+
+- **Logout**
+
+![Search Company](../backend/assets/Logout.png)
+
 ## Installation
 
 To run this project locally, follow these steps:
@@ -27,7 +77,7 @@ EMAIL_PASSWORD=your-email-password
 5. Run the project.
 
 ```
-node index.js
+node index.js 
 ```
 
 6. This will start the server at http://localhost:3001.

@@ -1,6 +1,7 @@
 import express from "express";
 import multer from "multer";
 import { uploadCompanies } from "../controllers/upload.controller.js";
+import { verifyToken } from "../middleware/auth.middleware.js";
 
 const router = express.Router();
 
@@ -8,6 +9,6 @@ const router = express.Router();
 const upload = multer({ storage: multer.memoryStorage() });
 
 // Route for handling POST requests to upload a file
-router.post("/upload", upload.single("file"), uploadCompanies);
+router.post("/upload", verifyToken, upload.single("file"), uploadCompanies);
 
 export default router;
