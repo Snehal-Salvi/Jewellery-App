@@ -17,7 +17,7 @@ app.use(bodyParser.json()); // Parse incoming request bodies in JSON format
 
 // CORS configuration
 const corsOptions = {
-  origin: "http://localhost:3000",
+  origin: "https://666dd605633cce156216953b--deft-truffle-e61564.netlify.app",
   credentials: true,
 };
 app.use(cors(corsOptions));

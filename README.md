@@ -4,7 +4,7 @@ This is a Jewelry Store management system consisting of both frontend and backen
 
 ## Deployment Link:
 
-[Jewelry Store]()
+[Jewelry Store](https://666dd605633cce156216953b--deft-truffle-e61564.netlify.app)
 
 ## Backend Documentation
 
