@@ -2,6 +2,29 @@
 
 This project implements a Jewelry Store Management System backend using Node.js, Express, MongoDB, and other libraries.
 
+## Snapshots
+
+- **Dashboard**
+
+![Dashboard](../frontend/public/Dashboard.png)
+
+- **Search Page**
+
+![Search Page](../frontend/public/SearchPage.png)
+
+- **Company Details Page**
+
+![Company Details Page](../frontend/public/CompanyDeatils.png)
+
+- **Signup Page**
+
+![Signup Page](../frontend/public/Signup.png)
+
+- **Sign In Page**
+
+![Sign In Page](../frontend/public/Signin.png)
+
+
 ## Features
 
 - Display company details including name, description, address, contact information, and owner details.
